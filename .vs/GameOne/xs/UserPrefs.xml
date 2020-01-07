@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{8ADB78C1-1D53-18FC-CCBD-B9BBDCADF19E}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemySpawn.cs">
+    <Files>
+      <File FileName="Assets/Scripts/BulletSpawn.cs" Line="20" Column="92" />
+      <File FileName="Assets/Scripts/Bullet.cs" />
+      <File FileName="Assets/Scripts/player.cs" />
+      <File FileName="Assets/Scripts/EnemySpawn.cs" Line="59" Column="93" />
+      <File FileName="Assets/Scripts/Enemy.cs" />
+      <File FileName="Assets/DieEffect.cs" Line="10" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameOne" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="EnemySpawn.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="46578957-9511-4a01-b99a-19d94c378a42" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
