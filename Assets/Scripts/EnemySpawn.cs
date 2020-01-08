@@ -8,14 +8,16 @@ namespace GameOne {
     {
         [SerializeField] private GameObject zoin;
         [SerializeField] private GameObject spitter;
-        [SerializeField] private GameObject eye;
+        [SerializeField] private GameObject eye; 
         [SerializeField] private Transform[] zoinSpawnPoints;
         [SerializeField] private Transform[] spitterSpawnPoints;
         [SerializeField] private Transform[] eyeSpawnPoints;
         [SerializeField] private bool pause;
         [SerializeField] private int enemySpawnSimultaneosly;
 
-        private bool haveSpitter;
+        [SerializeField] private Transform spitterEndPoint;
+
+        private bool haveSpitter = false;
         public bool HaveSpitter {
             get {
                 return haveSpitter;
@@ -32,7 +34,7 @@ namespace GameOne {
         void Start()
         {
             InvokeRepeating("SpawnZoin", 1f, 2f);
-            InvokeRepeating("SpawnSpitter", 10f, 10f);
+            InvokeRepeating("SpawnSpitter", 1f, 1f);
         }
 
         void SpawnZoin()
@@ -51,14 +53,17 @@ namespace GameOne {
         {
             if (pause) { return; }
 
-            if (!haveSpitter) {
-                spitterSpawnTimer += Time.deltaTime;
-                if (spitterSpawnTimer >= 10f)
-                {
+            //if (!haveSpitter) {
+                Debug.Log("Instanciando Spitter");
+                //spitterSpawnTimer += Time.deltaTime;
+                //if (spitterSpawnTimer >= 10f)
+                //{
                     int spitterSpawnPointIndex = Random.Range(0, spitterSpawnPoints.Length);
-                    Instantiate(spitter, spitterSpawnPoints[spitterSpawnPointIndex].position, Quaternion.identity);
-                }
-            }
+                    GameObject spitterInsta = Instantiate(spitter, spitterSpawnPoints[spitterSpawnPointIndex].position, Quaternion.identity);
+                    spitterInsta.GetComponent<Spitter>().endPoint = spitterEndPoint.position;
+                    spitterSpawnTimer = 0f;
+                //}
+           // }
         }
     }
 }

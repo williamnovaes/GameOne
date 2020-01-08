@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4736240060443252786}
   - component: {fileID: 4736240060443252785}
   - component: {fileID: 4736240060443252784}
+  - component: {fileID: 7145187176361583022}
+  - component: {fileID: 2565675991842304167}
   m_Layer: 0
   m_Name: Spitter
   m_TagString: Enemy
@@ -65,6 +67,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -100,3 +103,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &7145187176361583022
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736240060443252799}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &2565675991842304167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736240060443252799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd78810352131b47a30bc1ada7413b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPoint: {fileID: 4281800943566011251, guid: e280d7274795643059e3c641a596193e,
+    type: 3}
+  endPoint: {fileID: 0}
+  dieEffect: {fileID: 5157485078945011760, guid: 496d68f518761401c86659e18464f310,
+    type: 3}
+  velocity: 2
+  health: 100
