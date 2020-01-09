@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\Spitter.cs" />
+     <Compile Include="Assets\Scripts\Utils\StartMenu.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -39,7 +39,7 @@ namespace GameOne {
 
         void SpawnZoin()
         {
-            if (pause) { return; }
+            //if (pause) { return; }
 
 
             for (int i = 0; i < Random.Range(1, zoinSpawnPoints.Length); i++)
@@ -62,6 +62,7 @@ namespace GameOne {
                     GameObject spitterInsta = Instantiate(spitter, spitterSpawnPoints[spitterSpawnPointIndex].position, Quaternion.identity);
                     spitterInsta.GetComponent<Spitter>().endPoint = spitterEndPoint.position;
                     spitterSpawnTimer = 0f;
+                    pause = true;
                 //}
            // }
         }

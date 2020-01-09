@@ -29,6 +29,7 @@ namespace GameOne {
             spitterRB = GetComponent<Rigidbody2D>();
             spitterAnim = GetComponent<Animator>();
             comingUp = true;
+            velocity *= -1;
             timer = 0f;
         }
 
@@ -74,6 +75,7 @@ namespace GameOne {
             {
                 comingUp = !comingUp;
                 comingOut = !comingOut;
+                velocity *= -1;
             }
             return reached;
         }

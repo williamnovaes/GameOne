@@ -82,7 +82,7 @@ namespace GameOne {
             }
         }
 
-        private void OnCollisionStay2D(Collision2D collision)
+        private void OnTriggerStay2D(Collider2D collision)
         {
             //QUANDO COLIDE COM COLLIDER
             if (collision.gameObject.tag.Equals("Wall"))
@@ -99,7 +99,7 @@ namespace GameOne {
             }
         }
 
-        private void OnCollisionExit2D(Collision2D collision)
+        private void OnTriggerExit2D(Collider2D collision)
         {
             if (collision.gameObject.tag.Equals("Wall"))
             {
@@ -116,7 +116,8 @@ namespace GameOne {
             Vector2 movement = new Vector2(horizontal, 0f);
             playerRB.MovePosition(playerRB.position + movement * velocity * Time.fixedDeltaTime);
             */
-            
+            if (touchingWall) { return; }
+
             Vector2 playerVelocity = new Vector2(movement.x * velocity, playerRB.velocity.y);
             playerRB.velocity = playerVelocity;
         }

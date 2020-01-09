@@ -23,7 +23,7 @@ namespace GameOne
         private void FixedUpdate()
         {
             Vector2 lookDir = mousePosition - playerRb.position;
-            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg -90f;
             transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
 
