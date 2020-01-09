@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
-namespace GameOne
-{
+namespace GameOne {
     public class BulletSpawn : MonoBehaviour
     {
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private Camera cam;
         [SerializeField] private Rigidbody2D playerRb;
-        [SerializeField] private GameObject particle;
         [SerializeField] private float bulletForce;
+        [SerializeField] private AudioClip shootSound;
         Vector2 mousePosition;
 
         private void Update()
@@ -32,6 +31,7 @@ namespace GameOne
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(transform.up * bulletForce, ForceMode2D.Impulse);
+            AudioSource.PlayClipAtPoint(shootSound, cam.transform.position);
         }
     }
 }

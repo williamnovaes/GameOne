@@ -39,7 +39,7 @@ namespace GameOne {
 
         void SpawnZoin()
         {
-            //if (pause) { return; }
+            if (pause) { return; }
 
 
             for (int i = 0; i < Random.Range(1, zoinSpawnPoints.Length); i++)

@@ -13,6 +13,8 @@ namespace GameOne
         private float currentTime;
         [SerializeField] private GameObject hitEffect;
 
+        [SerializeField] private AudioClip bulletDestroy;
+
         void Start()
         {
             lifeTime = 4f;
@@ -44,6 +46,7 @@ namespace GameOne
             {
                 GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
                 Destroy(effect, .375f);
+                AudioSource.PlayClipAtPoint(bulletDestroy, Camera.main.transform.position);
                 Destroy();
             }
 

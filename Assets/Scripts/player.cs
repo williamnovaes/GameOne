@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 namespace GameOne {
-    public class player : MonoBehaviour
+    public class Player : MonoBehaviour
     {
         [SerializeField] private LayerMask whatsIsGround;
         [SerializeField] private Animator animator;
@@ -30,10 +30,13 @@ namespace GameOne {
         private float attackRate = 2f;
         private float cadence = 10f;
         [SerializeField] private Camera cam;
+        [SerializeField] private AudioClip jumpSound;
+        private AudioSource audioSource;
 
         // Start is called before the first frame update
         void Start()
         {
+            audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
             playerRB = GetComponent<Rigidbody2D>();
             groundCheck = GameObject.FindWithTag("GroundCheck").GetComponent<BoxCollider2D>();
@@ -82,7 +85,7 @@ namespace GameOne {
             }
         }
 
-        private void OnTriggerStay2D(Collider2D collision)
+        private void OnCollisionStay2D(Collision2D collision)
         {
             //QUANDO COLIDE COM COLLIDER
             if (collision.gameObject.tag.Equals("Wall"))
@@ -99,7 +102,7 @@ namespace GameOne {
             }
         }
 
-        private void OnTriggerExit2D(Collider2D collision)
+        private void OnCollisionExit2D(Collision2D collision)
         {
             if (collision.gameObject.tag.Equals("Wall"))
             {
@@ -129,6 +132,8 @@ namespace GameOne {
             if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 playerRB.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                //AudioSource.PlayClipAtPoint(jumpSound, cam.transform.position);
+                audioSource.Play();
             }
         }
 
