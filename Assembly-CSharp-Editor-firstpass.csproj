@@ -85,6 +85,12 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine">
  <HintPath>E:/Unity/2019.3.0f3/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
