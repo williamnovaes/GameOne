@@ -12,6 +12,7 @@ TagManager:
   - Wall
   - LeftWall
   - RightWall
+  - GM
   layers:
   - Default
   - TransparentFX
