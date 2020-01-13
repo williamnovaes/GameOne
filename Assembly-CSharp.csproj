@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\DieEffect.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Parallaxing.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Spitter.cs" />
@@ -57,6 +58,9 @@
      <Compile Include="Assets\Scripts\Utils\StartMenu.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
@@ -82,17 +86,14 @@
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/willi/Unity/Projects/GameOne/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>E:/Unity/2019.3.0f3/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
