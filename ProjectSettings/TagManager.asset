@@ -13,6 +13,7 @@ TagManager:
   - LeftWall
   - RightWall
   - GM
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - EnemySpawn
   - PassThrough
   - Wall
-  - 
+  - Background
   - 
   - 
   - 
