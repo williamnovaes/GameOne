@@ -14,7 +14,7 @@ namespace GameOne {
         private BoxCollider2D wallCheck;
         private BoxCollider2D groundCheck;
         [SerializeField] private int life;
-        [SerializeField] private float velocity = 1f;
+        [SerializeField] public float velocity = 1f;
         [SerializeField] private float jumpForce = 1f;
         private Vector2 movement;
         private Vector2 mousePosition;
