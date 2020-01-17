@@ -28,7 +28,7 @@ namespace GameOne {
         [SerializeField] private bool isMelee;
         private float nextAttackTime = 0f;
         private float attackRate = 2f;
-        private float cadence = 10f;
+        [SerializeField] private float cadence = 10f;
         [SerializeField] private Camera cam;
         [SerializeField] private AudioClip jumpSound;
         private AudioSource audioSource;
