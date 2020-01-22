@@ -6,13 +6,13 @@ namespace GameOne {
     public class Parallax : MonoBehaviour
     {
         private Transform cam;
-        private float lenght, startPos;
+        [SerializeField] private float lenght, startPos;
         [SerializeField] private float parallaxSpeed;
         
         void Awake() {
             startPos = transform.position.x;
             cam = Camera.main.transform;
-            lenght = GetComponent<SpriteRenderer>().bounds.size.x;
+            //lenght = GetComponent<SpriteRenderer>().bounds.size.x;
         }
         void FixedUpdate() {
             float temp = cam.position.x * (1 - parallaxSpeed);
