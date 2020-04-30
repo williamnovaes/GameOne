@@ -48,10 +48,24 @@
      <Compile Include="Assets\Demon\Scripts\DemonBehaviour.cs" />
      <Compile Include="Assets\Demon\Scripts\Fireball.cs" />
      <Compile Include="Assets\Demon\Scripts\FireballSpawn.cs" />
+     <Compile Include="Assets\Multiplayer\Scripts\MoveShip.cs" />
+     <Compile Include="Assets\Multiplayer\Scripts\ReceiveDamage.cs" />
+     <Compile Include="Assets\Multiplayer\Scripts\ShootBullets.cs" />
+     <Compile Include="Assets\Multiplayer\Scripts\SpawnEnemies.cs" />
      <Compile Include="Assets\Scripts\Delegates.cs" />
      <Compile Include="Assets\Scripts\Events.cs" />
      <Compile Include="Assets\Scripts\Json.cs" />
      <Compile Include="Assets\Scripts\Types.cs" />
+     <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
+     <None Include="Assets\ScriptTemplates\53-Mirror__Network Observer-NewNetworkObserver.cs.txt" />
+     <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
+     <None Include="Assets\Multiplayer\Mirror\version.txt" />
+     <None Include="Assets\Multiplayer\Mirror\Readme.txt" />
+     <None Include="Assets\ScriptTemplates\52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" />
+     <None Include="Assets\Multiplayer\Mirror\Plugins\Mono.Cecil\License.txt" />
+     <None Include="Assets\ScriptTemplates\55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" />
+     <None Include="Assets\ScriptTemplates\50-Mirror__Network Manager-NewNetworkManager.cs.txt" />
+     <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -234,6 +248,18 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.9f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.CecilX">
+ <HintPath>/Users/williamfermino/Unity/GameOne/Assets/Multiplayer/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.CecilX.Mdb">
+ <HintPath>/Users/williamfermino/Unity/GameOne/Assets/Multiplayer/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.CecilX.Pdb">
+ <HintPath>/Users/williamfermino/Unity/GameOne/Assets/Multiplayer/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.CecilX.Rocks">
+ <HintPath>/Users/williamfermino/Unity/GameOne/Assets/Multiplayer/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.9f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -639,6 +665,38 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{ff447910-f2e4-342c-fd14-b3826de270a0}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Weaver.csproj">
+      <Project>{21082636-1f38-f6ad-0e35-43879e599253}</Project>
+      <Name>Mirror.Weaver</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Authenticators.csproj">
+      <Project>{663ae505-6f28-3e6b-b522-74d0625287d5}</Project>
+      <Name>Mirror.Authenticators</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Components.csproj">
+      <Project>{3ba2b3f1-31e4-a62d-cd63-4f24ed15d738}</Project>
+      <Name>Mirror.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.csproj">
+      <Project>{2f710def-4625-f00d-9893-8ea903fedee1}</Project>
+      <Name>Mirror.Examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.CompilerSymbols.csproj">
+      <Project>{f4c17715-d9fb-55bd-be06-f6932117eaa0}</Project>
+      <Name>Mirror.CompilerSymbols</Name>
+    </ProjectReference>
+    <ProjectReference Include="Ninja.WebSockets.csproj">
+      <Project>{a0a0f90b-a2e3-b9de-ef0f-f22f40862c5c}</Project>
+      <Name>Ninja.WebSockets</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.csproj">
+      <Project>{e6f3c953-4ea7-38c7-3ed2-bfd2499d7b78}</Project>
+      <Name>Mirror</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Editor.csproj">
+      <Project>{4cb38d18-687f-5768-070a-a18cc6ecc92a}</Project>
+      <Name>Mirror.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
